@@ -5,11 +5,15 @@ function App() {
   return (
     <div className="relative min-h-screen">
       <Nav />
-      <section id="hero" className="relative min-h-screen">
+      <section
+        id="hero"
+        className="grid min-h-screen grid-cols-10 grid-rows-2"
+      >
         <Features />
         <Faq />
 
       </section>
+      
     </div>
   );
 }
