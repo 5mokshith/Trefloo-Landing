@@ -27,7 +27,7 @@ import {
           <AccordionItem value="item-3">
             <AccordionTrigger>What payment options are supported?</AccordionTrigger>
             <AccordionContent>
-              We support UPI, credit/debit cards, and even microloans or BNPL options in supported regions.
+              We support UPI, credit/debit cards, and even microloans or <span className="text-red-500">BNPL</span> options in supported regions.
             </AccordionContent>
           </AccordionItem>
   
@@ -48,7 +48,8 @@ import {
           <AccordionItem value="item-6">
             <AccordionTrigger>Can I plan my whole trip using AI?</AccordionTrigger>
             <AccordionContent>
-              Yes. The AI Itinerary Planner builds custom plans based on your interests, budget, and time.
+              Yes. The AI Itinerary Planner builds custom plans based on your interests, budget, and time authrised by the <span className="text-red-500">
+              Plan Management Team</span>.
             </AccordionContent>
           </AccordionItem>
   
@@ -62,10 +63,10 @@ import {
           <AccordionItem value="item-8">
             <AccordionTrigger>Can I chat with hosts or guides before booking?</AccordionTrigger>
             <AccordionContent>
-              Yes, there’s a multilingual chat system to communicate with guides and hosts securely.
+              Yes, there’s a multilingual chat system to communicate with guides and hosts securely and will be implemented in future updates.
             </AccordionContent>
           </AccordionItem>
-  
+  ``
           
   
           <AccordionItem value="item-10">

@@ -15,7 +15,8 @@ const features = [
   {
     Icon: RocketIcon,
     name: "AI Itinerary Planner",
-    description: "Get personalized travel plans based on your interests, budget, and time.",
+    description:
+      "Get personalized travel plans based on your interests, budget, and time.",
     href: "/",
     cta: "Explore",
     background: (
@@ -23,12 +24,14 @@ const features = [
         <Skeleton className="w-full h-full rounded-lg bg-zinc-900" />
       </div>
     ),
-    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 bg-black text-white shadow-inner p-2",
+    className:
+      "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 bg-black text-white shadow-inner p-2",
   },
   {
     Icon: HomeIcon,
     name: "Local Experiences",
-    description: "Book immersive homestays, workshops, and temple tours in rural communities.",
+    description:
+      "Book immersive homestays, workshops, and temple tours in rural communities.",
     href: "/",
     cta: "Discover",
     background: (
@@ -36,12 +39,14 @@ const features = [
         <Skeleton className="w-full h-full rounded-lg bg-zinc-900" />
       </div>
     ),
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 bg-black text-white shadow-inner",
+    className:
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 bg-black text-white shadow-inner",
   },
   {
     Icon: PersonIcon,
     name: "Village Guides & Hosts",
-    description: "Connect with trusted locals—guides, cooks, and artists with ratings and profiles.",
+    description:
+      "Connect with trusted locals—guides, cooks, and artists with ratings and profiles.",
     href: "/",
     cta: "Meet locals",
     background: (
@@ -49,12 +54,14 @@ const features = [
         <Skeleton className="w-73 h-59 mt-40 rounded-lg bg-zinc-900" />
       </div>
     ),
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 bg-black text-white p-2 shadow-inner",
+    className:
+      "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 bg-black text-white p-2 shadow-inner",
   },
   {
     Icon: BackpackIcon,
     name: "Travel & Payments",
-    description: "Book rides, stays, and pay with UPI, BNPL, or microloans in one place.",
+    description:
+      "Book rides, stays, and pay with UPI, BNPL, or microloans in one place.",
     href: "/",
     cta: "Get started",
     background: (
@@ -62,12 +69,14 @@ const features = [
         <Skeleton className="w-73 h-59 mt-40 rounded-lg bg-zinc-900" />
       </div>
     ),
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 bg-black text-white p-2 shadow-inner p-2",
+    className:
+      "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 bg-black text-white p-2 shadow-inner p-2",
   },
   {
     Icon: CalendarIcon,
     name: "Smart Calendar & Reminders",
-    description: "Track bookings, events, and trip alerts — all in one integrated timeline.",
+    description:
+      "Track bookings, events, and trip alerts — all in one integrated timeline.",
     href: "/",
     cta: "Stay on track",
     background: (
@@ -75,7 +84,8 @@ const features = [
         <Calendar mode="single" selected={new Date()} className="rounded-md" />
       </div>
     ),
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 bg-black text-white shadow-inner",
+    className:
+      "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 bg-black text-white shadow-inner",
   },
 ];
 
