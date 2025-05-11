@@ -5,38 +5,23 @@ import { Button, NavButton } from "../components/Button";
 import SkillsCard from "./SkillsCard";
 function Hero() {
 
-    const heroData = {
-        heading: "Hi, I'm Mokshith",
-        tagline: "Passionate Computer Science Engineer | Web Developer | ML Explorer",
-        description:
-            "I build responsive, scalable, and intelligent web applications that combine design and logic. Always exploring the latest in tech to solve real-world problems.",
-    };
-
   return (
     <>
-    <div className="hero-background absolute w-full h-screen">
-        <div className="relative w-full h-screen">
-          <video
-            src={HeroBg}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute -right-50 scale-125 -bottom-120"
-          ></video>
-        </div>
+    <div className="w-full min-h-screen col-start-3 col-span-8 row-span-2">
+      <video
+        autoPlay
+        loop
+        muted
+        className="w-full h-full"
+      >
+        <source src={HeroBg} type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-      <div className="hero-content absolute mt-45 p-2 text-white w-1/2 ml-28 z-10">
-          <Heading label={heroData.heading} className="mx-auto"></Heading>
-          <Tagline label={heroData.tagline} className="mx-auto my-2 font-light text-gray-300"></Tagline>
-          <Tagline label={heroData.description} className="mx-auto my-5 text-xl leading-8"></Tagline>
-          <div className="relative inline-block">
-            <Button label="Download Resume"></Button>
-          <NavButton label="Lets Talk"></NavButton>
-          </div>
-      </div>
-      <div className="relative">
-        <SkillsCard></SkillsCard>
+      <div className="absolute z-10 top-1/5 left-1/12 p-2 w-1/2">
+      <Heading label="Discover Rural India"></Heading>
+      <Tagline label="Explore Cultures. Connect Locally. Travel Authentically Effortless journeys. Rich cultures. Designed by AI, brought to life by locals " className="text-amber-50 text-xl m-2"></Tagline>
+      <Tagline label="Personalized journeys powered by AI, guided by locals." className="text-gray-500 text-xl m-2"></Tagline>
       </div>
     </>
   );

@@ -2,5 +2,5 @@
 
 body {
   @apply overflow-x-hidden;
-  background: oklch(0.15 0.01 0);
+  background: rgba(0, 0, 0, 0.955);
 }
