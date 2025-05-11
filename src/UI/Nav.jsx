@@ -1,6 +1,6 @@
 import { Moon, Sun, SunMoon } from "lucide-react";
 import { useState, useEffect } from "react";
-import Logo from "/LOGO-cropped.png";
+import Logo from "/LOGO-noBackground.png";
 import { NavButton } from "../components/Button";
 function Nav() {
     const [theme, setTheme] = useState(true);
@@ -38,7 +38,7 @@ useEffect(() => {
                     </ul>
                 </nav>
             </div>
-            <div className="flex w-full h-full justify-around items-center" onClick={toggleTheme}>
+            <div className="flex w-full h-full justify-end pr-10 items-center" onClick={toggleTheme}>
             <ul className="flex gap-4 p-1 whitespace-nowrap h-full items-center">
                 <li><NavButton label="Join waitlist"></NavButton></li>
                 <li className="hover:text-blue-400"><a href="#">Feedback</a></li>

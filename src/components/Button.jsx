@@ -17,7 +17,7 @@ function NavButton({ label }) {
 
 function Button(props) {
      return (
-        <button className=" h-10 px-12 relative inline-flex justify-center items-center bg-amber-50 text-black rounded-3xl font-semibold text-md uppercase leading-snug 
+        <button className=" h-10 px-12 mx-2 relative inline-flex justify-center items-center bg-amber-50 text-black rounded-3xl font-semibold text-md uppercase leading-snug 
         before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[linear-gradient(to_right,_#288ff0,_rgb(222,105,40))] before:rounded-3xl before:-z-10 before:transition-all before:duration-200 hover:before:scale-100 hover:before:blur-sm cursor-pointer
 
         after:content-[''] after:absolute after:inset-0 after:h-full after:w-full after:bg-[linear-gradient(to_right,_#288ff0,_rgb(222,105,40))] after:rounded-3xl after:-z-10 after:transition-all after:duration-200 hover:after:scale-100 hover:after:blur-sm
