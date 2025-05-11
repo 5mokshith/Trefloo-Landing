@@ -2,7 +2,6 @@ import HeroBg from "../assets/hero.webm";
 import Heading from "../components/Heading";
 import Tagline from "../components/Tagline";
 import { Button, NavButton } from "../components/Button";
-import SkillsCard from "./SkillsCard";
 function Hero() {
 
   return (
