@@ -19,6 +19,7 @@ import {
   CardDescription,
 } from "../components/ui/card";
 import Tagline from "../components/Tagline";
+import Heading from "../components/Heading";
 
 const features = [
   {
@@ -320,11 +321,21 @@ const features = [
 export function BentoDemo() {
   return (
     <>
-      <div className="flex justify-center items-center mx-77 -mt-110 ml-27   rounded-4xl p-10 flex-col">
-        <Tagline
-          label="Features"
-          className="text-amber-50 text-3xl font-bold text-center mb-2 capitalize p-1 z-1"
-        ></Tagline>
+      <div className="flex justify-center items-center rounded-4xl p-10 flex-col">
+        <div className="w-full flex-col gap-2 justify-center items-center text-center group">
+          <Heading
+            label="What Makes Us Unique"
+          ></Heading>
+          <Tagline
+            label="Discover the magic behind every journey.">
+          </Tagline>
+
+          <div className="flex justify-center my-10">
+            <div
+              className="w-2/5 h-1 rounded-full bg-amber-500 transition-shadow duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(245,158,11,0.7)]"
+            ></div>
+          </div>
+        </div>
         <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
           {features.map((feature) => (
             <BentoCard key={feature.name} {...feature} />

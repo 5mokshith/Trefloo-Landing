@@ -2,14 +2,23 @@ import React from "react";
 import { Skeleton } from "../components/ui/skeleton";
 import Tagline from "../components/Tagline";
 import WcuImg from "../assets/Wcu.png"; // <-- Import the image
+import Heading from "../components/Heading";
 
 function Wcu() {
   return (
     <div className="container py-20">
-      <Tagline
-        label="Why Choose Trefloo"
-        className="text-white text-3xl font-bold text-center mb-8 mt-12 capitalize p-1"
-      ></Tagline>
+      <div className="text-center m-2 mb-5 group"> 
+        <Heading
+          label="Travel. Reimagined. By Us."
+        ></Heading>
+        <Tagline label="Because you deserve more than just a trip"></Tagline>
+      <div className="flex justify-center my-10">
+        <div
+          className="w-2/5 h-1 rounded-full bg-blue-500 transition-shadow duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(59,130,246,0.7)]"
+        ></div>
+      </div>
+      </div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black mx-22 p-10 rounded-4xl">
         <div className="relative h-[480px] rounded-xl overflow-hidden shadow-xl flex items-end">
