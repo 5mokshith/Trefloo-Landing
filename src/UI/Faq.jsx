@@ -66,7 +66,7 @@ import {
               Yes, there’s a multilingual chat system to communicate with guides and hosts securely and will be implemented in future updates.
             </AccordionContent>
           </AccordionItem>
-  ``
+  
           
   
           <AccordionItem value="item-10">
