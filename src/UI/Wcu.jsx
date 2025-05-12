@@ -16,7 +16,7 @@ function Wcu() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">
-                Meet the founders
+                Meet the founderss
               </h3>
               <p className="text-zinc-300 text-sm">
                 Expanding economic opportunities in rural India through
