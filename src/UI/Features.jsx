@@ -29,7 +29,7 @@ const features = [
     cta: "Explore",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 ">
-        <Card className="w-full  bg-black border-none ">
+        <Card className="w-full  bg-black border-none shadow-inner shadow-amber-600">
           <CardHeader>
             <CardTitle>Travel Itinerary</CardTitle>
             <CardDescription>3-Day Trip to Kerala</CardDescription>
@@ -75,18 +75,17 @@ const features = [
       </div>
     ),
     className:
-      "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 bg-black text-white shadow-inner p-2",
+      "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3 bg-black text-white shadow-inner shadow-amber-600 p-2",
   },
   {
     Icon: HomeIcon,
     name: "Local Experiences",
-    description:
-      "Book immersive homestays, workshops, and temple tours.",
+    description: "Book immersive homestays, workshops, and temple tours.",
     href: "/",
     cta: "Discover",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-800 p-2 opacity-20 ml-22">
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-800 p-2 opacity-20 ml-22 shadow-inner shadow-amber-600">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Local Experiences
@@ -154,7 +153,7 @@ const features = [
       </div>
     ),
     className:
-      "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 bg-black text-white shadow-inner",
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2 bg-black text-white shadow-inner shadow-amber-600",
   },
   {
     Icon: PersonIcon,
@@ -165,7 +164,7 @@ const features = [
     cta: "Meet locals",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2">
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Local Guides
@@ -228,7 +227,7 @@ const features = [
       </div>
     ),
     className:
-      "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 bg-black text-white p-2 shadow-inner",
+      "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3 bg-black text-white p-2 shadow-inner shadow-amber-600",
   },
   {
     Icon: BackpackIcon,
@@ -239,7 +238,7 @@ const features = [
     cta: "Get started",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2">
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Booking Summary
@@ -300,7 +299,7 @@ const features = [
       </div>
     ),
     className:
-      "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 bg-black text-white p-2 shadow-inner p-2",
+      "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4 bg-black text-white p-2 shadow-inner shadow-amber-600",
   },
   {
     Icon: CalendarIcon,
@@ -311,18 +310,18 @@ const features = [
     cta: "Stay on track",
     background: (
       <div className="absolute inset-4 z-0 bg-black rounded-lg transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <Calendar mode="single" selected={new Date()} className="rounded-md" />
+        <Calendar mode="single" selected={new Date()} className="rounded-md shadow-inner shadow-amber-600" />
       </div>
     ),
     className:
-      "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 bg-black text-white shadow-inner",
+      "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4 bg-black text-white shadow-inner shadow-amber-600",
   },
 ];
 
 export function BentoDemo() {
   return (
-    <div className="flex justify-center items-center mx-54 my-74">
-      <BentoGrid className="lg:grid-rows-3">
+    <div className="flex justify-center items-center mx-54 mt-96  rounded-4xl p-10">
+      <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}

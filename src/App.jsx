@@ -2,6 +2,7 @@ import Nav from "./UI/Nav";
 import Hero from "./UI/Hero";
 import Features from "./UI/Features";
 import Faq from "./UI/Faq"
+import Wcu from "./UI/Wcu"
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       </section>
       <Features></Features>
       <Faq></Faq>
-      
+      <Wcu></Wcu>
+
     </div>
   );
 }
