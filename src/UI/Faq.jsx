@@ -7,7 +7,7 @@ import {
   
   function Faq() {
     return (
-      <section className="max-w-2xl mx-auto my-16 px-4 text-white">
+      <section className="max-w-2xl mx-auto my-40 px-4 text-white">
         <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1">

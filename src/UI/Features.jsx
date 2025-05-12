@@ -18,6 +18,7 @@ import {
   CardTitle,
   CardDescription,
 } from "../components/ui/card";
+import Tagline from "../components/Tagline";
 
 const features = [
   {
@@ -310,7 +311,11 @@ const features = [
     cta: "Stay on track",
     background: (
       <div className="absolute inset-4 z-0 bg-black rounded-lg transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <Calendar mode="single" selected={new Date()} className="rounded-md shadow-inner shadow-amber-600" />
+        <Calendar
+          mode="single"
+          selected={new Date()}
+          className="rounded-md shadow-inner shadow-amber-600"
+        />
       </div>
     ),
     className:
@@ -320,13 +325,19 @@ const features = [
 
 export function BentoDemo() {
   return (
-    <div className="flex justify-center items-center mx-54 mt-96  rounded-4xl p-10">
-      <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
-        {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
-        ))}
-      </BentoGrid>
-    </div>
+    <>
+      <div className="flex justify-center items-center mx-77 -mt-110 ml-27   rounded-4xl p-10 flex-col">
+        <Tagline
+          label="Features"
+          className="text-white text-3xl font-bold text-center mb-2 capitalize p-1 z-1"
+        ></Tagline>
+        <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
+          {features.map((feature) => (
+            <BentoCard key={feature.name} {...feature} />
+          ))}
+        </BentoGrid>
+      </div>
+    </>
   );
 }
 

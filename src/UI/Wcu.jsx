@@ -1,14 +1,15 @@
 import React from "react";
 import { Skeleton } from "../components/ui/skeleton";
-
+import Tagline from "../components/Tagline";
 function Wcu() {
   return (
     <div className="container  py-20 ">
 
       
-      <h2 className="text-3xl font-bold text-center mb-8 mt-12   bg-clip-text bg-gradient-to-r text-white  capitalize p-1">
+      {/* <h2 className="text-3xl font-bold text-center mb-8 mt-12   bg-clip-text bg-gradient-to-r text-white  capitalize p-1">
         Why Choose Trefloo
-      </h2>
+      </h2> */}
+      <Tagline label="Why Choose Trefloo" className="text-white text-3xl font-bold text-center mb-8 mt-12  capitalize p-1"></Tagline>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black mx-22 p-10 rounded-4xl">
         <div className="relative h-[480px] rounded-xl overflow-hidden shadow-xl">
