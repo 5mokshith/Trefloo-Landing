@@ -1,10 +1,12 @@
-import { Moon, Sun, SunMoon } from "lucide-react";
+import { Moon, Sun, SunMoon, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Logo from "/LOGO-noBackground.png";
 import { NavButton } from "../components/Button";
 import { BookMarked } from "lucide-react";
+
 function Nav() {
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,13 +21,31 @@ function Nav() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [scrolled]);
+
+    const toggleMenu = (e) => {
+        e.stopPropagation();
+        setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header style={scrolled ? { boxShadow: '0 0 10px 3px rgba(255, 191, 0, 0.2)' } : {}} className={`flex justify-around items-center text-white p-2 px-4  fixed top-0 transition-all duration-800 z-50  ${scrolled ? 'translate-x-50 top-2 rounded-4xl w-3/4 backdrop-blur-md' : 'bg-transparent w-full'}`}>
-            <div className="flex items-center justify-start w-1/2 gap-20 h-full">
+        <header 
+            style={scrolled ? { boxShadow: '0 0 20px 3px #b7bcc4' } : {}} 
+            className={`flex justify-around items-center text-white p-2 px-4 fixed top-0 transition-all duration-800 z-50 w-full
+                ${scrolled 
+                    ? 'md:translate-x-50 md:top-2 md:rounded-4xl md:w-3/4 backdrop-blur-md' 
+                    : 'bg-transparent'
+                }`}
+        >
+            <div className="flex items-center justify-between w-full md:w-1/2 gap-4 md:gap-20 h-full">
                 <div className="min-w-[130px]">
                     <img src={Logo} alt="Can't load logo" className="h-12 w-auto rounded-md" />
                 </div>
-                <nav>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:block">
                     <ul className="flex gap-6 p-1 whitespace-nowrap h-full">
                         <li className="hover:text-blue-400"><a href="#">Features</a></li>
                         <li className="hover:text-blue-400"><a href="#">How it works</a></li>
@@ -34,11 +54,64 @@ function Nav() {
                     </ul>
                 </nav>
             </div>
-            <div className="flex w-full h-full justify-end pr-10 items-center">
+
+            {/* Desktop Right Section */}
+            <div className="hidden md:flex w-full h-full justify-end pr-10 items-center">
                 <ul className="flex gap-4 p-1 whitespace-nowrap h-full items-center">
                     <li><NavButton label={<><span>Join waitlist </span><BookMarked size={16} /></>}></NavButton></li>
                     <li className="hover:text-blue-400"><a href="#">Feedback</a></li>
                 </ul>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+                className="md:hidden hamburger-button p-2 z-50"
+                onClick={toggleMenu}
+                aria-label="Toggle menu"
+            >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Mobile Menu Overlay */}
+            {isMenuOpen && (
+                <div 
+                    className="fixed inset-0 bg-black/50 backdrop-blur-sm md:hidden z-40"
+                    onClick={closeMenu}
+                />
+            )}
+
+            {/* Mobile Menu */}
+            <div 
+                className={`mobile-menu fixed top-0 right-0 h-screen w-64 bg-zinc-900/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out z-50
+                    ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} 
+                    md:hidden`}
+            >
+                <div className="flex flex-col h-full p-6">
+                    <div className="flex justify-end mb-8">
+                        <button 
+                            onClick={closeMenu}
+                            className="p-2 hover:text-blue-400"
+                            aria-label="Close menu"
+                        >
+                            <X size={24} />
+                        </button>
+                    </div>
+                    <nav className="flex-1">
+                        <ul className="space-y-6">
+                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>Features</a></li>
+                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>How it works</a></li>
+                            <li className="hover:text-blue-400"><a href="#skills" onClick={closeMenu}>About us</a></li>
+                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>FAQ</a></li>
+                            <li className="pt-4">
+                                <NavButton 
+                                    label={<><span>Join waitlist </span><BookMarked size={16} /></>}
+                                    onClick={closeMenu}
+                                />
+                            </li>
+                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>Feedback</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
     );
