@@ -37,13 +37,13 @@ function Hero() {
 
   return (
     <>
-      <div className="w-full min-h-screen relative overlay-visible ">
+      <div className="w-full min-h-screen relative overlay-visible">
         {/* 🎥 Background Video */}
         <motion.video
           autoPlay
           loop
           muted
-          className="absolute inset-0 w-full h-full object-cover z-0 scale-130 ml-12 pt-22"
+          className="absolute inset-0 w-full h-full object-cove z-0 scale-170  pt-2 mt-65"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -67,7 +67,7 @@ function Hero() {
             viewport={{ margin: "-150px", amount: 0.6 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <Heading label="Discover Rural India" />
+            <Heading label="Beyond Destinations: Experience India" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -103,7 +103,7 @@ function Hero() {
 
         {/* 🖼️ Grid with Torchlight Effect */}
         <motion.div
-          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-77 pl-42 pr-22  lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-22 mt-18"
+          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-77 pl-42 pr-35  lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-26 mt-62"
           ref={gridRef}
           onMouseMove={handleMouseMove}
           initial={{ opacity: 0, y: 50 }}
@@ -111,15 +111,15 @@ function Hero() {
           viewport={{ margin: "-50px", amount: 0.05 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Bro this is overlay */}
+          {/* Brother! this is overlay */}
           <div
-            className="absolute top-0 left-30 w-[65rem] h-[50rem] pointer-events-none z-20"
+            className="absolute top-0 left-41  w-[58rem] h-[46rem] pointer-events-none z-20 rounded-xl"
             style={{
               background: `ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
               backgroundImage: `radial-gradient(ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
             }}
           ></div>
-          {/* Rendering hero bruh! */}
+          {/* Rendering hero images hehehe! */}
           {images.map((img, index) => (
             <motion.div
               key={index}

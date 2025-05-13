@@ -345,7 +345,7 @@ const features = [
 export function BentoDemo() {
   return (
     <>
-      <div className="flex justify-center items-center rounded-4xl p-10 flex-col group mt-166">
+      <div className="flex justify-center items-center rounded-4xl p-10 flex-col group mt-190">
         <div className="w-full flex-col gap-2 justify-center items-center text-center">
           <Heading label="What Makes Us Unique"></Heading>
           <Tagline label="Discover the magic behind every journey."></Tagline>
