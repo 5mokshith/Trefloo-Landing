@@ -1,5 +1,7 @@
 function Waitlist() {
-return();
+return(
+    
+);
 }
 
 export default Waitlist;

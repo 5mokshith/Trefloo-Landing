@@ -113,7 +113,7 @@ function Hero() {
         >
           {/* Adjusted torchlight overlayyyyyyyyyy */}
           <div
-            className="absolute top-0 left-41 w-[58rem] h-[44rem] pointer-events-none z-20 rounded-xl"
+            className="absolute top-0 left-41 w-[56rem] h-[44rem] pointer-events-none z-20 rounded-xl"
             style={{
               backgroundImage: `radial-gradient(circle 180px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
             }}
@@ -122,7 +122,7 @@ function Hero() {
           {images.map((img, index) => (
             <motion.div
               key={index}
-              className="w-full aspect-[4/3] group overflow-hidden rounded-lg shadow-lg relative z-10"
+              className="w-full aspect-[4/3] max-w-105 group overflow-hidden rounded-lg shadow-lg relative z-10"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
