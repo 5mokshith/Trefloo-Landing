@@ -8,7 +8,7 @@ import Tagline from '../components/Tagline';
 
 const HowItWorks = () => {
   return (
-    <section className="relative py-20 px-6 sm:px-12 bg-gradient-to-br from-black via-zinc-900 to-amber-950/30 overflow-hidden">
+    <section className="relative py-20 px-6 sm:px-12 bg-gradient-to-br from-black via-zinc-900 to-amber-950/30 overflow-hidden group">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-zinc-900/80 to-amber-900/20 opacity-90" />
         <div className="absolute inset-0 grid grid-cols-12 gap-4 opacity-10">
@@ -23,7 +23,7 @@ const HowItWorks = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10 group">
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         <Tagline label="How it works"></Tagline>
         <Heading label="How Trefloo connects you to real India"></Heading>
            <div className="flex justify-center my-10">

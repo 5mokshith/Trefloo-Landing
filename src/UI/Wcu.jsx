@@ -6,8 +6,8 @@ import Heading from "../components/Heading";
 
 function Wcu() {
   return (
-    <div className="container py-20">
-      <div className="text-center m-2 mb-5 group"> 
+    <div className="container py-20 group">
+      <div className="text-center m-2 mb-5"> 
         <Heading
           label="Travel. Reimagined. By Us."
         ></Heading>

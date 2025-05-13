@@ -9,8 +9,8 @@ import Heading from "../components/Heading";
 import Tagline from "../components/Tagline";
 function Faq() {
   return (
-    <section>
-        <div className="flex-col w-4/5 m-auto rounded-4xl p-2 text-center group">
+    <section className="group">
+        <div className="flex-col w-4/5 m-auto rounded-4xl p-2 text-center">
           <Heading label=" Frequently Wandered Questions"></Heading>
           <Tagline label="Clearing your doubts, one step at a time."></Tagline>
            <div className="flex justify-center my-10">
