@@ -215,6 +215,14 @@ const HowItWorks = () => {
                 Learn more →
               </a>
             </div>
+            <h3 className="text-lg font-bold text-amber-100 mb-2 tracking-tight">
+            Discover India’s True Heart
+            </h3>
+            <p className="text-zinc-300">
+Journey through India’s diverse landscapes, from vibrant rural villages to bustling towns. Experience local traditions, arts, cuisine, and homestays, all curated for authenticity and meaningful cultural exchange. Each journey is designed to connect you with India’s rich, living heritage.            </p>
+            <a href="#features" className="text-purple-400 hover:underline mt-4 inline-block font-medium">
+              Learn more →
+            </a>
           </div>
         </div>
       </div>
