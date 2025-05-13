@@ -81,8 +81,10 @@ function Wcu() {
           </h3>
 
           <div className="relative bg-zinc-900 bg-opacity-60 backdrop-blur-md border border-zinc-700 rounded-2xl p-6 shadow-lg">
-            <div className="text-7xl text-yellow-400 font-serif mb-4 leading-none">
-              "
+            <div className="flex items-center mb-4">
+              <span className="text-7xl text-yellow-400 font-serif leading-none drop-shadow-lg mr-2 select-none">
+                &#8220;
+              </span>
             </div>
             <p className="text-lg leading-relaxed italic font-medium text-zinc-200">
               Built by creators passionate about culture, community, and tech,
@@ -96,8 +98,10 @@ function Wcu() {
               access, we make mindful travel seamless. Together, we're bridging
               heritage with modern convenience—one village, one story at a time.
             </p>
-            <div className="text-7xl text-yellow-400 font-serif text-right mt-4 leading-none">
-              "
+            <div className="flex items-center justify-end mt-4">
+              <span className="text-7xl text-yellow-400 font-serif leading-none drop-shadow-lg ml-2 select-none">
+                &#8221;
+              </span>
             </div>
           </div>
         </motion.div>
