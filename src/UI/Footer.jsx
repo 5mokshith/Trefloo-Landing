@@ -34,6 +34,17 @@ function Footer() {
                         <li className="flex items-center">
                             <Linkedin size={16} className="mr-2" />
                             <a
+                                href="https://www.linkedin.com/in/avinash-kamadri-28246935a/"
+                                className="hover:underline text-blue-300"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Avinash Kamadri
+                            </a>
+                        </li>
+                        <li className="flex items-center">
+                            <Linkedin size={16} className="mr-2" />
+                            <a
                                 href="https://www.linkedin.com/in/mokshith-rao-50a385290"
                                 className="hover:underline text-blue-300"
                                 target="_blank"
@@ -51,17 +62,6 @@ function Footer() {
                                 rel="noopener noreferrer"
                             >
                                 Raghavendra Manchikatla
-                            </a>
-                        </li>
-                        <li className="flex items-center">
-                            <Linkedin size={16} className="mr-2" />
-                            <a
-                                href="https://www.linkedin.com/in/avinash-kamadri-28246935a/"
-                                className="hover:underline text-blue-300"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Avinash Kamadri
                             </a>
                         </li>
                     </ul>
