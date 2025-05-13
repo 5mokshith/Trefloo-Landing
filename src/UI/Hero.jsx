@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import HeroBg from "../assets/hero.webm";
 import Heading from "../components/Heading";
 import Tagline from "../components/Tagline";
-import { Button, NavButton } from "../components/Button";
+import { Button } from "../components/Button";
 import { motion } from "framer-motion";
 
 function Hero() {
@@ -38,12 +38,12 @@ function Hero() {
   return (
     <>
       <div className="w-full min-h-screen relative overlay-visible">
-        {/* 🎥 Background Video */}
+        {/* 🎥 Background Video - only for screens above 1024px */}
         <motion.video
           autoPlay
           loop
           muted
-          className="absolute inset-0 w-full h-full object-cove z-0 scale-170  pt-2 mt-65"
+          className="hidden xl:block absolute inset-0 w-full h-full object-cove z-0 scale-170 pt-2 mt-65"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -53,9 +53,37 @@ function Hero() {
           Your browser does not support the video tag.
         </motion.video>
 
-        {/* 📝 Heading + Tagline + Button */}
+        {/* Mobile & Tablet Hero Content (below 1024px) */}
+        <div className="flex flex-col items-center justify-center min-h-screen xl:hidden px-4 py-0 text-center relative">
+          {/* Decorative glowing gradient background */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] max-w-xl blur-2xl rounded-full bg-gradient-to-tr from-[#be3144]/60 via-amber-400/30 to-blue-500/20 opacity-70 animate-pulse" />
+            <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-[60vw] h-[30vw] max-w-lg blur-2xl rounded-full bg-gradient-to-br from-blue-500/30 via-[#be3144]/40 to-amber-400/20 opacity-60 animate-pulse" />
+            {/* Extra glow for mobile */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[60vw] max-w-2xl blur-[100px] rounded-full bg-gradient-to-br from-amber-400/30 via-blue-500/20 to-[#be3144]/20 opacity-60 animate-pulse" />
+          </div>
+          <div className="relative z-10 w-full flex flex-col items-center">
+            <Heading label="Beyond Destinations: Experience India" />
+            <Tagline
+              label="Explore Cultures. Connect Locally. Travel Authentically. Effortless journeys. Rich cultures. Designed by AI, brought to life by locals."
+              className="text-amber-50 text-lg my-2 drop-shadow-[0_2px_16px_rgba(190,49,68,0.25)]"
+            />
+            <Tagline
+              label="Personalized journeys powered by AI, guided by locals."
+              className="text-blue-100 text-base mb-4 drop-shadow-[0_2px_12px_rgba(59,130,246,0.18)]"
+            />
+            <div className="flex justify-center my-8 w-full">
+              <div
+                className="w-2/5 h-1 rounded-full bg-[#be3144] transition-all duration-300 shadow-[0_0_24px_8px_rgba(190,49,68,0.18)]"
+              ></div>
+            </div>
+            <Button label="Join the Waitlist Now" className="shadow-lg shadow-[#be3144]/30 hover:shadow-[#be3144]/60 transition" />
+          </div>
+        </div>
+
+        {/* 📝 Heading + Tagline + Button for desktop (above 1024px) */}
         <motion.div
-          className="absolute z-20 top-1/7 left-1/12 p-2 w-1/2"
+          className="hidden xl:block absolute z-20 top-1/7 left-1/12 p-2 w-1/2"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ margin: "-150px", amount: 0.6 }}
@@ -101,9 +129,9 @@ function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* 🖼️ Grid with Torchlight Effect */}
+        {/* 🖼️ Grid with Torchlight Effect - only for screens above 1024px */}
         <motion.div
-          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-3 gap-y-58 pl-42 pr-35 lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-26 mt-62"
+          className="hidden xl:grid absolute z-20 grid-cols-2 grid-rows-2 gap-x-3 gap-y-58 pl-42 pr-35 xl:top-[55%] xl:left-[10%] w-[80%] max-h-[50vh] -ml-26 mt-62"
           ref={gridRef}
           onMouseMove={handleMouseMove}
           initial={{ opacity: 0, y: 50 }}
@@ -111,14 +139,14 @@ function Hero() {
           viewport={{ margin: "-50px", amount: 0.05 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Adjusted torchlight overlayyyyyyyyyy */}
+          {/* Torchlight overlay */}
           <div
             className="absolute top-0 left-41 w-[56rem] h-[44rem] pointer-events-none z-20 rounded-xl"
             style={{
               backgroundImage: `radial-gradient(circle 180px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
             }}
           ></div>
-          {/* Rendering hero images heheheeeeeeeee! */}
+          {/* Rendering hero images */}
           {images.map((img, index) => (
             <motion.div
               key={index}
@@ -151,7 +179,4 @@ function Hero() {
   );
 }
 
-{
-  /* OPINION: tits or ass  */
-}
 export default Hero;
