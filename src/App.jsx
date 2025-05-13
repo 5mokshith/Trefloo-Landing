@@ -5,6 +5,7 @@ import Faq from "./UI/Faq";
 import Wcu from "./UI/Wcu";
 import HowItWorks from "./UI/Hiw";
 import Feedback from "./UI/Feedback";
+import Waitlist from "./UI/Waitlist";
 import Footer from "./UI/Footer";
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
 
       <section className="w-full h-full">
         <Feedback></Feedback>
+      </section>
+
+      <section>
+        <Waitlist></Waitlist>
       </section>
 
     

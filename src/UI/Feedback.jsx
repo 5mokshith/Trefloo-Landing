@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Heading from "../components/Heading";
 import Tagline from "../components/Tagline";
 import { Button } from "../components/Button";
+import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 function Feedback() {
     const [formData, setFormData] = useState({
@@ -9,7 +11,9 @@ function Feedback() {
         email: "",
         feedbackType: "",
         message: "",
+        rating: 0
     });
+    const [hoverRating, setHoverRating] = useState(0);
 
     function handleFormData(e) {
         e.preventDefault();
@@ -24,6 +28,21 @@ function Feedback() {
             [name]: value,
         });
     }
+
+    const handleStarClick = (value) => {
+        setFormData({
+            ...formData,
+            rating: value
+        });
+    };
+
+    const handleStarHover = (value) => {
+        setHoverRating(value);
+    };
+
+    const handleStarLeave = () => {
+        setHoverRating(0);
+    };
 
     return (
         <section className="flex flex-col items-center justify-center min-h-screen py-12 px-4 bg-gradient-to-br from-black via-zinc-900 to-amber-950/30">
@@ -67,6 +86,36 @@ function Feedback() {
                         className="w-full px-4 py-2 rounded-lg bg-zinc-800/80 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500 transition"
                         autoComplete="off"
                     />
+                </div>
+
+                {/* Star Rating Section */}
+                <div className="mb-5 text-left">
+                    <label className="block text-zinc-300 mb-1 text-sm font-medium">
+                        Rate Your Experience <span className="text-red-400">*</span>
+                    </label>
+                    <div className="flex gap-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                            <motion.button
+                                key={star}
+                                type="button"
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => handleStarClick(star)}
+                                onMouseEnter={() => handleStarHover(star)}
+                                onMouseLeave={handleStarLeave}
+                                className="focus:outline-none"
+                            >
+                                <Star
+                                    size={28}
+                                    className={`transition-colors duration-200 ${
+                                        star <= (hoverRating || formData.rating)
+                                            ? "fill-amber-500 text-amber-500"
+                                            : "text-zinc-600"
+                                    }`}
+                                />
+                            </motion.button>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="mb-5 text-left">
