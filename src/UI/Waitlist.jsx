@@ -78,7 +78,6 @@ function Waitlist() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Email Field */}
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
               <svg
@@ -101,7 +100,6 @@ function Waitlist() {
             />
           </div>
 
-          {/* Name Field */}
           <input
             type="text"
             value={name}
@@ -110,7 +108,6 @@ function Waitlist() {
             className="w-full px-4 py-3 rounded-xl bg-zinc-800/80 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500"
           />
 
-          {/* Interest Textarea */}
           <textarea
             value={interestText}
             onChange={(e) => setInterestText(e.target.value)}
@@ -119,7 +116,6 @@ function Waitlist() {
             className="w-full px-4 py-3 rounded-xl bg-zinc-800/80 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-amber-500 resize-none"
           />
 
-          {/* Star Rating Section */}
           <div className="space-y-2">
             <p className="text-zinc-300 text-sm">
               How excited are you about our launch?
@@ -149,7 +145,6 @@ function Waitlist() {
             </div>
           </div>
 
-          {/* Referral Source */}
           <select
             value={referralSource}
             onChange={(e) => setReferralSource(e.target.value)}
@@ -165,7 +160,6 @@ function Waitlist() {
             <option value="other">Other</option>
           </select>
 
-          {/* Role (Radio Buttons) */}
           <div className="text-zinc-300">
             <p className="mb-2 text-sm">You are a:</p>
             <div className="flex flex-wrap gap-4">

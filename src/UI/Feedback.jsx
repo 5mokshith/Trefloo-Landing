@@ -125,7 +125,6 @@ function Feedback() {
           />
         </div>
 
-        {/* Star Rating Section */}
         <div className="mb-5 text-left">
           <label className="block text-zinc-300 mb-1 text-sm font-medium">
             Rate Your Experience <span className="text-red-400">*</span>
