@@ -3,9 +3,8 @@ import Hero from "./UI/Hero";
 import Features from "./UI/Features";
 import Faq from "./UI/Faq";
 import Wcu from "./UI/Wcu";
-import FaqImg from "./assets/Faq.png"; // <-- Import the background image
-import { linearGradient } from "framer-motion/client";
-
+import HowItWorks from "./UI/Hiw";
+import Footer from "./UI/Footer";
 function App() {
   return (
     <div className="relative min-h-screen">
@@ -17,6 +16,14 @@ function App() {
       <Features></Features>
       <Wcu></Wcu>
       <Faq></Faq>
+
+      <section>
+        <HowItWorks />
+      </section>
+
+      <section>
+        <Footer></Footer>
+      </section>
 
     </div>
   );

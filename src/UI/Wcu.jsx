@@ -14,7 +14,7 @@ function Wcu() {
         <Tagline label="Because you deserve more than just a trip"></Tagline>
       <div className="flex justify-center my-10">
         <div
-          className="w-2/5 h-1 rounded-full bg-blue-500 transition-shadow duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(59,130,246,0.7)]"
+          className="w-2/5 h-1 rounded-full bg-blue-500 transition-all duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(59,130,246,0.7)] group-hover:w-[60%]"
         ></div>
       </div>
       </div>
