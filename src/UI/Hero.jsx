@@ -102,8 +102,9 @@ function Hero() {
         </motion.div>
 
         {/* 🖼️ Grid with Torchlight Effect */}
+        {/* TODO: the torch is not centered to the curosor for some reason */}
         <motion.div
-          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-77 pl-42 pr-35  lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-26 mt-62"
+          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-3 gap-y-58 pl-42 pr-35  lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-26 mt-62"
           ref={gridRef}
           onMouseMove={handleMouseMove}
           initial={{ opacity: 0, y: 50 }}
@@ -111,9 +112,10 @@ function Hero() {
           viewport={{ margin: "-50px", amount: 0.05 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Brother! this is overlay */}
+          {/*  this is overlay */}
+          {/* needs to be adjusted eveytime the grid layout fucksup */}
           <div
-            className="absolute top-0 left-41  w-[58rem] h-[46rem] pointer-events-none z-20 rounded-xl"
+            className="absolute top-0 left-41  w-[58rem] h-[44rem] pointer-events-none z-20 rounded-xl"
             style={{
               background: `ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
               backgroundImage: `radial-gradient(ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
@@ -131,12 +133,12 @@ function Hero() {
                 ease: "easeOut",
                 delay: 0.5 + index * 0.1,
               }}
-            >
+              >
               <img
                 src={img.url}
                 alt="Rural India"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+                />
               {/* Gradient Text on Hover */}
               <div className="absolute p-2 inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                 <div className="flex-col text-center gap-20">
@@ -152,4 +154,5 @@ function Hero() {
   );
 }
 
+{/* OPINION: tits or ass  */}
 export default Hero;
