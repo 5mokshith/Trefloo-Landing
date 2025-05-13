@@ -194,7 +194,8 @@ const HowItWorks = () => {
               </a>
             </div>
 
-            {/* Card 3: Rural Experiences */}
+            
+            {/* Card 3: Discover India’s True Heart */}
             <div className="rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900/80 via-black/80 to-amber-900/10 p-8 shadow-xl shadow-black/40 hover:shadow-amber-900/20 transition group backdrop-blur-md">
               <div className="flex justify-center mb-4">
                 <span className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-purple-700/60 via-purple-400/30 to-amber-400/10 shadow-lg border border-purple-700/30">
@@ -202,27 +203,15 @@ const HowItWorks = () => {
                 </span>
               </div>
               <h3 className="text-lg font-bold text-amber-100 mb-2 tracking-tight">
-                Live Rural Experiences
+                Discover India’s True Heart
               </h3>
               <p className="text-zinc-300">
-                Experience traditions, arts, cuisine, and homestays deeply
-                rooted in rural life, all curated for authenticity and impact.
+                Journey through India’s diverse landscapes, from vibrant rural villages to bustling towns. Experience local traditions, arts, cuisine, and homestays, all curated for authenticity and meaningful cultural exchange. Each journey is designed to connect you with India’s rich, living heritage.
               </p>
-              <a
-                href="#features"
-                className="text-purple-400 hover:underline mt-4 inline-block font-medium"
-              >
+              <a href="#features" className="text-purple-400 hover:underline mt-4 inline-block font-medium">
                 Learn more →
               </a>
             </div>
-            <h3 className="text-lg font-bold text-amber-100 mb-2 tracking-tight">
-            Discover India’s True Heart
-            </h3>
-            <p className="text-zinc-300">
-Journey through India’s diverse landscapes, from vibrant rural villages to bustling towns. Experience local traditions, arts, cuisine, and homestays, all curated for authenticity and meaningful cultural exchange. Each journey is designed to connect you with India’s rich, living heritage.            </p>
-            <a href="#features" className="text-purple-400 hover:underline mt-4 inline-block font-medium">
-              Learn more →
-            </a>
           </div>
         </div>
       </div>
