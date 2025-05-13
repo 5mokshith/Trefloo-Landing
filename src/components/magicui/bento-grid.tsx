@@ -96,7 +96,8 @@ const BentoCard = ({
           size="sm"
           className={cn(
             "pointer-events-auto",
-            isDark && "text-white bg-zinc-600 border-white hover:bg-white hover:text-zinc-900"
+            isDark &&
+              "text-white bg-zinc-600 border-white hover:bg-white hover:text-zinc-900"
           )}
         >
           <a href={href}>

@@ -3,6 +3,7 @@ import HeroBg from "../assets/hero.webm";
 import Heading from "../components/Heading";
 import Tagline from "../components/Tagline";
 import { Button, NavButton } from "../components/Button";
+import { motion } from "framer-motion";
 
 function Hero() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -36,51 +37,100 @@ function Hero() {
 
   return (
     <>
-      <div className="w-full min-h-screen relative overflow-hidden">
+      <div className="w-full min-h-screen relative overlay-visible ">
         {/* 🎥 Background Video */}
-        <video
+        <motion.video
           autoPlay
           loop
           muted
-          className="w-full h-full scale-130 translate-y-38 object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0 scale-130 ml-12 pt-22"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <source src={HeroBg} type="video/webm" />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
 
         {/* 📝 Heading + Tagline + Button */}
-        <div className="absolute z-10 top-1/5 left-1/12 p-2 w-1/2">
-          <Heading label="Discover Rural India" />
-          <Tagline
-            label="Explore Cultures. Connect Locally. Travel Authentically. Effortless journeys. Rich cultures. Designed by AI, brought to life by locals."
-            className="text-amber-50 text-xl m-2"
-          />
-          <Tagline
-            label="Personalized journeys powered by AI, guided by locals."
-            className="text-gray-500 text-xl m-2 mb-10"
-          />
-          <Button label="Join the Waitlist Now" />
-        </div>
+        <motion.div
+          className="absolute z-20 top-1/7 left-1/12 p-2 w-1/2"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ margin: "-150px", amount: 0.6 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: "-150px", amount: 0.6 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <Heading label="Discover Rural India" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: "-150px", amount: 0.6 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          >
+            <Tagline
+              label="Explore Cultures. Connect Locally. Travel Authentically. Effortless journeys. Rich cultures. Designed by AI, brought to life by locals."
+              className="text-amber-50 text-xl m-2"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ margin: "-150px", amount: 0.6 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          >
+            <Tagline
+              label="Personalized journeys powered by AI, guided by locals."
+              className="text-gray-500 text-xl m-2 mb-10"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ margin: "-150px", amount: 0.6 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+          >
+            <Button label="Join the Waitlist Now" />
+          </motion.div>
+        </motion.div>
 
         {/* 🖼️ Grid with Torchlight Effect */}
-        <div
-          className="absolute z-10 grid grid-cols-2 grid-rows-2 gap-6 p-2 lg:top-[65%] lg:left-[10%] w-[68%] "
+        <motion.div
+          className="absolute z-20 grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-77 pl-42 pr-22  lg:top-[55%] lg:left-[10%] w-[80%] max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] -ml-22 mt-18"
           ref={gridRef}
           onMouseMove={handleMouseMove}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ margin: "-50px", amount: 0.05 }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           {/* Bro this is overlay */}
           <div
-            className="absolute top-0 left-0 w-full h-full pointer-events-none z-20"
+            className="absolute top-0 left-30 w-[65rem] h-[50rem] pointer-events-none z-20"
             style={{
               background: `ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
               backgroundImage: `radial-gradient(ellipse 180px 100px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, rgba(0,0,0,0.65) 100%)`,
             }}
           ></div>
-          {/* Rendering hero avi.....! */}
+          {/* Rendering hero bruh! */}
           {images.map((img, index) => (
-            <div
+            <motion.div
               key={index}
               className="w-full aspect-[4/3] group overflow-hidden rounded-lg shadow-lg relative z-10"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.5 + index * 0.1,
+              }}
             >
               <img
                 src={img.url}
@@ -89,14 +139,14 @@ function Hero() {
               />
               {/* Gradient Text on Hover */}
               <div className="absolute p-2 inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                  <div className="flex-col text-center gap-20">
-                    <Tagline label={img.description}></Tagline>
-                    <Button label="Explore more"></Button>
-                  </div>
+                <div className="flex-col text-center gap-20">
+                  <Tagline label={img.description}></Tagline>
+                  <Button label="Explore more"></Button>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </>
   );

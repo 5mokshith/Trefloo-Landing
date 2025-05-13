@@ -35,27 +35,51 @@ const features = [
         <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-950/60 via-black/70 to-amber-900/20 pointer-events-none z-10" />
         <Card className="w-full bg-black/80 border-none shadow-xl shadow-amber-900/30 backdrop-blur-md relative z-0">
           <CardHeader>
-            <CardTitle className="text-lg font-bold text-amber-100 tracking-wide">Travel Itinerary</CardTitle>
-            <CardDescription className="text-amber-300">3-Day Trip to Kerala</CardDescription>
+            <CardTitle className="text-lg font-bold text-amber-100 tracking-wide">
+              Travel Itinerary
+            </CardTitle>
+            <CardDescription className="text-amber-300">
+              3-Day Trip to Kerala
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-amber-200">Day 1: Kochi</h4>
-                <p className="text-xs text-zinc-300">Morning: Fort Kochi walk</p>
-                <p className="text-xs text-zinc-300">Afternoon: Kathakali show</p>
+                <h4 className="text-sm font-semibold text-amber-200">
+                  Day 1: Kochi
+                </h4>
+                <p className="text-xs text-zinc-300">
+                  Morning: Fort Kochi walk
+                </p>
+                <p className="text-xs text-zinc-300">
+                  Afternoon: Kathakali show
+                </p>
                 <p className="text-xs text-zinc-300">Evening: Seafood dinner</p>
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-amber-200">Day 2: Munnar</h4>
-                <p className="text-xs text-zinc-300">Morning: Tea plantation tour</p>
-                <p className="text-xs text-zinc-300">Afternoon: Spice garden visit</p>
-                <p className="text-xs text-zinc-300">Evening: Homestay dinner</p>
+                <h4 className="text-sm font-semibold text-amber-200">
+                  Day 2: Munnar
+                </h4>
+                <p className="text-xs text-zinc-300">
+                  Morning: Tea plantation tour
+                </p>
+                <p className="text-xs text-zinc-300">
+                  Afternoon: Spice garden visit
+                </p>
+                <p className="text-xs text-zinc-300">
+                  Evening: Homestay dinner
+                </p>
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-amber-200">Day 3: Alleppey</h4>
-                <p className="text-xs text-zinc-300">Full day: Houseboat experience</p>
-                <p className="text-xs text-zinc-300">Evening: Village cooking class</p>
+                <h4 className="text-sm font-semibold text-amber-200">
+                  Day 3: Alleppey
+                </h4>
+                <p className="text-xs text-zinc-300">
+                  Full day: Houseboat experience
+                </p>
+                <p className="text-xs text-zinc-300">
+                  Evening: Village cooking class
+                </p>
               </div>
             </div>
           </CardContent>
@@ -321,19 +345,13 @@ const features = [
 export function BentoDemo() {
   return (
     <>
-      <div className="flex justify-center items-center rounded-4xl p-10 flex-col group">
+      <div className="flex justify-center items-center rounded-4xl p-10 flex-col group mt-166">
         <div className="w-full flex-col gap-2 justify-center items-center text-center">
-          <Heading
-            label="What Makes Us Unique"
-          ></Heading>
-          <Tagline
-            label="Discover the magic behind every journey.">
-          </Tagline>
+          <Heading label="What Makes Us Unique"></Heading>
+          <Tagline label="Discover the magic behind every journey."></Tagline>
 
           <div className="flex justify-center my-10">
-            <div
-              className="w-2/5 h-1 rounded-full bg-amber-500 transition-all duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(245,158,11,0.7)] group-hover:w-[60%]"
-            ></div>
+            <div className="w-2/5 h-1 rounded-full bg-amber-500 transition-all duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(245,158,11,0.7)] group-hover:w-[60%]"></div>
           </div>
         </div>
         <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
