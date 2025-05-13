@@ -55,7 +55,7 @@ function Hero() {
 
         {/* 📝 Heading + Tagline + Button */}
         <motion.div
-          className="absolute z-20 top-1/5 left-1/12 p-2 w-1/2"
+          className="absolute z-20 top-1/7 left-1/12 p-2 w-1/2"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ margin: "-150px", amount: 0.6 }}

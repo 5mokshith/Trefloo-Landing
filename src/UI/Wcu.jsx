@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Skeleton } from "../components/ui/skeleton";
 import Tagline from "../components/Tagline";
 import WcuImg from "../assets/Wcu.png"; // <-- Import the image
@@ -6,22 +6,6 @@ import Heading from "../components/Heading";
 import { motion } from "framer-motion";
 
 function Wcu() {
-<<<<<<< Updated upstream
-  return (
-    <div className="container py-20 group">
-      <div className="text-center m-2 mb-5"> 
-        <Heading
-          label="Travel. Reimagined. By Us."
-        ></Heading>
-        <Tagline label="Because you deserve more than just a trip"></Tagline>
-      <div className="flex justify-center my-10">
-        <div
-          className="w-2/5 h-1 rounded-full bg-blue-500 transition-all duration-300 shadow-none group-hover:shadow-[0_0_20px_6px_rgba(59,130,246,0.7)] group-hover:w-[60%]"
-        ></div>
-      </div>
-      </div>
-=======
-  // Parallax effect for left image section
   const imgRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -63,13 +47,9 @@ function Wcu() {
           ></motion.div>
         </div>
       </motion.div>
->>>>>>> Stashed changes
-
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black mx-22 p-10 rounded-4xl">
-<<<<<<< Updated upstream
-        <div className="relative h-[480px] rounded-xl overflow-hidden shadow-xl flex items-end">
-=======
+        {/* Left: Image section */}
         <motion.div
           ref={imgRef}
           className="relative h-[480px] rounded-xl overflow-hidden shadow-xl flex items-end transition-transform duration-500 ease-[cubic-bezier(.23,1.02,.32,1)] hover:shadow-amber-700/40 group p-4"
@@ -82,7 +62,6 @@ function Wcu() {
           transition={{ duration: 0.8 }}
         >
           {/* TODO: Add your picture */}
->>>>>>> Stashed changes
           <img
             src={WcuImg}
             alt="Founders"
@@ -91,7 +70,7 @@ function Wcu() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">
-                Meet the founderss
+                Meet the founders
               </h3>
               <p className="text-zinc-300 text-sm">
                 Expanding economic opportunities in rural India through
@@ -99,18 +78,8 @@ function Wcu() {
               </p>
             </div>
           </div>
-<<<<<<< Updated upstream
-        </div>
-        {/* right side  section */}
-        <div className="space-y-6 p-4 text-white">
-          <h3 className="text-3xl font-bold tracking-wide text-gradient bg-gradient-to-r from-yellow-300 to-pink-500 bg-clip-text text-transparent">
-            Who We Are
-          </h3>
-
-          <div className="relative bg-zinc-900 bg-opacity-60 backdrop-blur-md border border-zinc-700 rounded-2xl p-6 shadow-lg">
-            <div className="text-7xl text-yellow-400 font-serif mb-4 leading-none">“</div>
-=======
         </motion.div>
+
         {/* Right: About section */}
         <motion.div
           className="space-y-6 p-4 text-white"
@@ -132,7 +101,6 @@ function Wcu() {
             <div className="text-7xl text-yellow-400 font-serif mb-4 leading-none">
               "
             </div>
->>>>>>> Stashed changes
             <p className="text-lg leading-relaxed italic font-medium text-zinc-200">
               Built by creators passionate about culture, community, and tech,
               our platform reimagines rural travel through immersive experiences
