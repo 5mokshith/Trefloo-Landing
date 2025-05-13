@@ -50,7 +50,7 @@ function Hero() {
 
         {/* 📝 Heading + Tagline + Button */}
         <div className="absolute z-10 top-1/5 left-1/12 p-2 w-1/2">
-          <Heading label="Discover Rural India" />
+          <Heading label="Beyond Destinations: Experience India" />
           <Tagline
             label="Explore Cultures. Connect Locally. Travel Authentically. Effortless journeys. Rich cultures. Designed by AI, brought to life by locals."
             className="text-amber-50 text-xl m-2"
