@@ -4,30 +4,48 @@ import Features from "./UI/Features";
 import Faq from "./UI/Faq";
 import Wcu from "./UI/Wcu";
 import HowItWorks from "./UI/Hiw";
+import Voyana from "./UI/voyana";
 import Feedback from "./UI/Feedback";
 import Waitlist from "./UI/Waitlist";
 import Footer from "./UI/Footer";
 function App() {
   return (
     <div className="relative min-h-screen">
-      <Nav />
+
+      <section>
+        <Nav />
+      </section>
 
       <section id="hero" className="relative min-h-screen mb-80">
         <Hero />
       </section>
-      <Features></Features>
-      <Wcu></Wcu>
-      <Faq></Faq>
+
+      <section id="features">
+        <Features></Features>
+      </section>
+
+      <section id="wcu">
+        <Wcu></Wcu>
+      </section>
 
       <section>
+        <Voyana></Voyana>
+      </section>
+
+      <section id="faq">
+        <Faq></Faq>
+      </section>
+
+      <section id="how-it-works">
         <HowItWorks />
       </section>
 
-      <section className="w-full h-full">
+
+      <section id="feedback" className="w-full h-full">
         <Feedback></Feedback>
       </section>
 
-      <section>
+      <section id="waitlist">
         <Waitlist></Waitlist>
       </section>
 

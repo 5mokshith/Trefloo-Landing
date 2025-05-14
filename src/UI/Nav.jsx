@@ -4,6 +4,16 @@ import Logo from "/LOGO-noBackground.png";
 import { NavButton } from "../components/Button";
 import { BookMarked } from "lucide-react";
 
+// Smooth scroll helper
+const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+        const yOffset = -100;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+    }
+};
+
 function Nav() {
     const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +41,20 @@ function Nav() {
         setIsMenuOpen(false);
     };
 
+    // For mobile and desktop nav links
+    const handleNavClick = (e, id) => {
+        e.preventDefault();
+        closeMenu();
+        scrollToSection(id);
+    };
+
+    // For waitlist button
+    const handleWaitlistClick = (e) => {
+        e.preventDefault();
+        closeMenu();
+        scrollToSection("waitlist");
+    };
+
     return (
         <header 
             style={scrolled ? { boxShadow: '0 0 20px 3px #b7bcc4' } : {}} 
@@ -47,10 +71,18 @@ function Nav() {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:block">
                     <ul className="flex gap-6 p-1 whitespace-nowrap h-full">
-                        <li className="hover:text-blue-400"><a href="#">Features</a></li>
-                        <li className="hover:text-blue-400"><a href="#">How it works</a></li>
-                        <li className="hover:text-blue-400"><a href="#skills">About us</a></li>
-                        <li className="hover:text-blue-400"><a href="#">FAQ</a></li>
+                        <li className="hover:text-blue-400">
+                            <a href="#features" onClick={e => handleNavClick(e, "features")}>Features</a>
+                        </li>
+                        <li className="hover:text-blue-400">
+                            <a href="#how-it-works" onClick={e => handleNavClick(e, "how-it-works")}>How it works</a>
+                        </li>
+                        <li className="hover:text-blue-400">
+                            <a href="#wcu" onClick={e => handleNavClick(e, "wcu")}>About us</a>
+                        </li>
+                        <li className="hover:text-blue-400">
+                            <a href="#faq" onClick={e => handleNavClick(e, "faq")}>FAQ</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -58,8 +90,17 @@ function Nav() {
             {/* Desktop Right Section */}
             <div className="hidden md:flex w-full h-full justify-end pr-10 items-center">
                 <ul className="flex gap-4 p-1 whitespace-nowrap h-full items-center">
-                    <li><NavButton label={<><span>Join waitlist </span><BookMarked size={16} /></>}></NavButton></li>
-                    <li className="hover:text-blue-400"><a href="#">Feedback</a></li>
+                    <li>
+                        <a href="#waitlist" onClick={e => handleNavClick(e, "waitlist")}>
+                            <NavButton
+                                label={<><span>Join waitlist </span><BookMarked size={16} /></>}
+                                onClick={handleWaitlistClick}
+                            />
+                        </a>
+                    </li>
+                    <li className="hover:text-blue-400">
+                        <a href="#feedback" onClick={e => handleNavClick(e, "feedback")}>Feedback</a>
+                    </li>
                 </ul>
             </div>
 
@@ -98,17 +139,27 @@ function Nav() {
                     </div>
                     <nav className="flex-1">
                         <ul className="space-y-6">
-                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>Features</a></li>
-                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>How it works</a></li>
-                            <li className="hover:text-blue-400"><a href="#skills" onClick={closeMenu}>About us</a></li>
-                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>FAQ</a></li>
+                            <li className="hover:text-blue-400">
+                                <a href="#features" onClick={e => handleNavClick(e, "features")}>Features</a>
+                            </li>
+                            <li className="hover:text-blue-400">
+                                <a href="#how-it-works" onClick={e => handleNavClick(e, "how-it-works")}>How it works</a>
+                            </li>
+                            <li className="hover:text-blue-400">
+                                <a href="#wcu" onClick={e => handleNavClick(e, "wcu")}>About us</a>
+                            </li>
+                            <li className="hover:text-blue-400">
+                                <a href="#faq" onClick={e => handleNavClick(e, "faq")}>FAQ</a>
+                            </li>
                             <li className="pt-4">
                                 <NavButton 
                                     label={<><span>Join waitlist </span><BookMarked size={16} /></>}
-                                    onClick={closeMenu}
+                                    onClick={handleWaitlistClick}
                                 />
                             </li>
-                            <li className="hover:text-blue-400"><a href="#" onClick={closeMenu}>Feedback</a></li>
+                            <li className="hover:text-blue-400">
+                                <a href="#feedback" onClick={e => handleNavClick(e, "feedback")}>Feedback</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
