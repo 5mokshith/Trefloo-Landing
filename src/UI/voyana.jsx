@@ -190,7 +190,7 @@ const Voyana = () => {
         </div>
         
         {/* Right: Interactive Display - UPDATED WITH MOBILE SUPPORT */}
-        <div className="voyana-sticky-video hidden lg:block w-1/2 h-screen sticky top-[100px] right-0 z-20 flex items-center justify-center">
+        <div className="voyana-sticky-video hidden lg:block w-1/2 h-screen sticky top-[100px] right-0 z-20  items-center justify-center">
           <div className="relative w-[95%] h-[85%] rounded-2xl overflow-hidden group">
             {/* Background effects */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-indigo-900/20"></div>
