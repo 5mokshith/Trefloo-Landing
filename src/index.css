@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 body {
   @apply overflow-x-hidden;
   background: rgba(0, 0, 0, 0.955);
@@ -287,4 +292,10 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+.gradient-heading::selection {
+  background-color: #be3144; /* soft highlight */
+  -webkit-text-fill-color: white; /* override the transparent fill */
+  color: white; /* for non-webkit fallback */
 }

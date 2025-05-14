@@ -125,7 +125,7 @@ function Hero() {
             viewport={{ margin: "-150px", amount: 0.6 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
           >
-            <Button label="Join the Waitlist Now" />
+            <a href="#waitlist"><Button label="Join the Waitlist Now" /></a>
           </motion.div>
         </motion.div>
 
@@ -162,7 +162,7 @@ function Hero() {
               <img
                 src={img.url}
                 alt="Rural India"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-[90%] ml-2 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               {/* Gradient Text on Hover */}
               <div className="absolute p-2 inset-0 grid place-items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">

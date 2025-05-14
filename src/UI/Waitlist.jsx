@@ -67,7 +67,7 @@ function Waitlist() {
       >
         <div className="mb-8 text-center">
           <h1
-            className={`text-2xl text-transparent bg-[linear-gradient(to_bottom,_white_60%,_transparent_100%)] bg-clip-text font-semibold leading-snug`}
+            className={`gradient-heading text-2xl text-transparent bg-[linear-gradient(to_bottom,_white_60%,_transparent_100%)] bg-clip-text font-semibold leading-snug`}
           >
             Join the Early Access Waitlist
           </h1>

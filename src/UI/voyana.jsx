@@ -133,7 +133,7 @@ const Voyana = () => {
         {/* Left: Content */}
         <div className="flex-1 flex flex-col justify-center py-20 px-6 sm:px-12 lg:w-1/2">
           <Tagline label="AI at your service" className="text-indigo-300 font-semibold tracking-wide" />
-          <h1 className="text-4xl sm:text-3xl md:text-2xl lg:text-5xl text-transparent bg-gradient-to-b from-purple-200 via-white to-indigo-300 bg-clip-text font-semibold leading-snug mb-6">
+          <h1 className="gradient-heading text-4xl sm:text-3xl md:text-2xl lg:text-5xl text-transparent bg-gradient-to-b from-purple-200 via-white to-indigo-300 bg-clip-text font-semibold leading-snug mb-6">
             Let Voyana Plan. You Just Pack
           </h1>
           <div className="mb-8 text-lg text-indigo-100/90 max-w-xl">
