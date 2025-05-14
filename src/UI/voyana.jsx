@@ -185,6 +185,18 @@ const Voyana = () => {
                 description="Talk to Voyana in your language — it listens, responds, and guides you smoothly."
                 color="indigo"
               />
+              <Card
+                icon={<WandSparkles className="w-8 h-8 text-indigo-300 drop-shadow" />}
+                title="Instant Recommendations"
+                description="Get on-the-go suggestions for food, sights, and experiences as you explore new places."
+                color="indigo"
+              />
+              <Card
+                icon={<BrainCog className="w-8 h-8 text-purple-300 drop-shadow" />}
+                title="Seamless Collaboration"
+                description="Plan trips with friends or family—Voyana syncs preferences and keeps everyone in the loop."
+                color="purple"
+              />
             </div>
           </div>
         </div>

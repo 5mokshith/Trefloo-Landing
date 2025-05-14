@@ -76,7 +76,7 @@ function Wcu() {
           viewport={{ margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-2xl sm:text-3xl font-bold tracking-wide text-gradient bg-gradient-to-r from-yellow-300 to-pink-500 bg-clip-text text-transparent">
+          <h3 className="gradient-heading text-2xl sm:text-3xl font-bold tracking-wide text-gradient bg-gradient-to-r from-yellow-300 to-pink-500 bg-clip-text text-transparent">
             Who We Are
           </h3>
 
