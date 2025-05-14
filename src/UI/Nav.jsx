@@ -57,7 +57,7 @@ function Nav() {
 
     return (
         <header 
-            style={scrolled ? { boxShadow: '0 0 20px 3px #b7bcc4' } : {}} 
+            style={scrolled ? { boxShadow: '0 0 20px 1px #b7bcc4' } : {}} 
             className={`flex justify-around items-center text-white p-2 px-4 fixed top-0 transition-all duration-800 z-50 w-full
                 ${scrolled 
                     ? 'md:translate-x-50 md:top-2 md:rounded-4xl md:w-3/4 backdrop-blur-md' 
