@@ -29,46 +29,32 @@ const features = [
     href: "/",
     cta: "Explore",
     background: (
-      <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 ">
-        <Card className="w-full  bg-black border-none shadow-inner shadow-amber-600">
+      <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95">
+        {/* Modern gradient overlay */}
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-amber-950/60 via-black/70 to-amber-900/20 pointer-events-none z-10" />
+        <Card className="w-full bg-black/80 border-none shadow-xl shadow-amber-900/30 backdrop-blur-md relative z-0">
           <CardHeader>
-            <CardTitle>Travel Itinerary</CardTitle>
-            <CardDescription>3-Day Trip to Kerala</CardDescription>
+            <CardTitle className="text-lg font-bold text-amber-100 tracking-wide">Travel Itinerary</CardTitle>
+            <CardDescription className="text-amber-300">3-Day Trip to Kerala</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Day 1: Kochi</h4>
-                <p className="text-xs text-muted-foreground">
-                  Morning: Fort Kochi walk
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Afternoon: Kathakali show
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Evening: Seafood dinner
-                </p>
+                <h4 className="text-sm font-semibold text-amber-200">Day 1: Kochi</h4>
+                <p className="text-xs text-zinc-300">Morning: Fort Kochi walk</p>
+                <p className="text-xs text-zinc-300">Afternoon: Kathakali show</p>
+                <p className="text-xs text-zinc-300">Evening: Seafood dinner</p>
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Day 2: Munnar</h4>
-                <p className="text-xs text-muted-foreground">
-                  Morning: Tea plantation tour
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Afternoon: Spice garden visit
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Evening: Homestay dinner
-                </p>
+                <h4 className="text-sm font-semibold text-amber-200">Day 2: Munnar</h4>
+                <p className="text-xs text-zinc-300">Morning: Tea plantation tour</p>
+                <p className="text-xs text-zinc-300">Afternoon: Spice garden visit</p>
+                <p className="text-xs text-zinc-300">Evening: Homestay dinner</p>
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-medium">Day 3: Alleppey</h4>
-                <p className="text-xs text-muted-foreground">
-                  Full day: Houseboat experience
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Evening: Village cooking class
-                </p>
+                <h4 className="text-sm font-semibold text-amber-200">Day 3: Alleppey</h4>
+                <p className="text-xs text-zinc-300">Full day: Houseboat experience</p>
+                <p className="text-xs text-zinc-300">Evening: Village cooking class</p>
               </div>
             </div>
           </CardContent>
@@ -86,7 +72,9 @@ const features = [
     cta: "Discover",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-800 p-2 opacity-20 ml-22 shadow-inner shadow-amber-600">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-tr from-amber-700/30 via-black/60 to-amber-400/10 pointer-events-none z-10" />
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-800 p-2 opacity-20 ml-22 shadow-inner shadow-amber-600 relative z-0">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Local Experiences
@@ -165,7 +153,9 @@ const features = [
     cta: "Meet locals",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-tl from-amber-700/30 via-black/60 to-amber-400/10 pointer-events-none z-10" />
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600 relative z-0">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Local Guides
@@ -239,7 +229,9 @@ const features = [
     cta: "Get started",
     background: (
       <div className="absolute inset-4 z-0 transition-transform duration-500 group-hover:scale-95 opacity-20">
-        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-amber-700/30 via-black/60 to-amber-400/10 pointer-events-none z-10" />
+        <ScrollArea className="w-full h-full rounded-lg bg-zinc-900 p-2 shadow-inner shadow-amber-600 relative z-0">
           <div className="p-4">
             <h4 className="mb-4 text-sm font-medium leading-none text-white">
               Booking Summary
@@ -311,10 +303,12 @@ const features = [
     cta: "Stay on track",
     background: (
       <div className="absolute inset-4 z-0 bg-black rounded-lg transition-transform duration-500 group-hover:scale-95 opacity-20">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-amber-700/30 via-black/60 to-amber-400/10 pointer-events-none z-10" />
         <Calendar
           mode="single"
           selected={new Date()}
-          className="rounded-md shadow-inner shadow-amber-600"
+          className="rounded-md shadow-inner shadow-amber-600 relative z-0"
         />
       </div>
     ),
@@ -329,7 +323,7 @@ export function BentoDemo() {
       <div className="flex justify-center items-center mx-77 -mt-110 ml-27   rounded-4xl p-10 flex-col">
         <Tagline
           label="Features"
-          className="text-white text-3xl font-bold text-center mb-2 capitalize p-1 z-1"
+          className="text-amber-50 text-3xl font-bold text-center mb-2 capitalize p-1 z-1"
         ></Tagline>
         <BentoGrid className="lg:grid-rows-3 shadow-inner shadow-amber-600">
           {features.map((feature) => (

@@ -1,88 +1,112 @@
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-  } from "@/components/ui/accordion";
-  
-  function Faq() {
-    return (
-      <section className="max-w-2xl mx-auto my-40 px-4 text-white">
-        <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import FaqImg from "../assets/Faq.png";
+
+function Faq() {
+  return (
+    <section
+      className="relative max-w-3xl mx-auto my-32 px-4 py-12 rounded-3xl overflow-hidden shadow-2xl"
+      style={{
+        backgroundImage: `url(${FaqImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-zinc-900/70 to-amber-900/30 pointer-events-none" />
+      <div className="relative z-10">
+        <h2 className="text-4xl font-extrabold mb-8 text-center text-white drop-shadow-lg tracking-tight">
+          Frequently Asked Questions
+        </h2>
         <Accordion type="single" collapsible className="space-y-4">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Is this platform accessible?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Is this platform accessible?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Yes. It adheres to the WAI-ARIA accessibility guidelines for inclusive web apps.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-2">
-            <AccordionTrigger>Can I book experiences through the app?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Can I book experiences through the app?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Absolutely! You can browse and book stays, local experiences, and more directly from the platform.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-3">
-            <AccordionTrigger>What payment options are supported?</AccordionTrigger>
-            <AccordionContent>
-              We support UPI, credit/debit cards, and even microloans or <span className="text-red-500">BNPL</span> options in supported regions.
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              What payment options are supported?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
+              We support UPI, credit/debit cards, and even microloans or <span className="text-red-400 font-semibold">BNPL</span> options in supported regions.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-4">
-            <AccordionTrigger>How do I connect with local guides?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              How do I connect with local guides?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Each village or town has verified host profiles. You can contact and book them directly.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-5">
-            <AccordionTrigger>Are local festivals included in the travel plans?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Are local festivals included in the travel plans?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Yes, our Festival Explorer shows authentic festivals with calendar invites and booking options.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-6">
-            <AccordionTrigger>Can I plan my whole trip using AI?</AccordionTrigger>
-            <AccordionContent>
-              Yes. The AI Itinerary Planner builds custom plans based on your interests, budget, and time authrised by the <span className="text-red-500">
-              Plan Management Team</span>.
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Can I plan my whole trip using AI?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
+              Yes. The AI Itinerary Planner builds custom plans based on your interests, budget, and time, authorized by the <span className="text-red-400 font-semibold">Plan Management Team</span>.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-7">
-            <AccordionTrigger>Is it possible to book rural homestays?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Is it possible to book rural homestays?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Definitely. You can stay with local hosts for a truly immersive cultural experience.
             </AccordionContent>
           </AccordionItem>
-  
+
           <AccordionItem value="item-8">
-            <AccordionTrigger>Can I chat with hosts or guides before booking?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              Can I chat with hosts or guides before booking?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               Yes, there’s a multilingual chat system to communicate with guides and hosts securely and will be implemented in future updates.
             </AccordionContent>
           </AccordionItem>
-  
-          
-  
+
           <AccordionItem value="item-10">
-            <AccordionTrigger>How does the budget tracking feature work?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="backdrop-blur bg-white/5 rounded-lg px-4 py-3 text-lg font-semibold text-white hover:bg-white/10 transition">
+              How does the budget tracking feature work?
+            </AccordionTrigger>
+            <AccordionContent className="bg-black/60 rounded-b-lg px-4 py-3 text-zinc-200">
               An AI-powered spending assistant helps you track your travel expenses and avoid overspending.
             </AccordionContent>
           </AccordionItem>
-  
-          
-  
-          
         </Accordion>
-      </section>
-    );
-  }
-  
-  export default Faq;
-  
+      </div>
+    </section>
+  );
+}
+
+export default Faq;

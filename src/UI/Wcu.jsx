@@ -1,20 +1,23 @@
 import React from "react";
 import { Skeleton } from "../components/ui/skeleton";
 import Tagline from "../components/Tagline";
+import WcuImg from "../assets/Wcu.png"; // <-- Import the image
+
 function Wcu() {
   return (
-    <div className="container  py-20 ">
-      {/* <h2 className="text-3xl font-bold text-center mb-8 mt-12   bg-clip-text bg-gradient-to-r text-white  capitalize p-1">
-        Why Choose Trefloo
-      </h2> */}
+    <div className="container py-20">
       <Tagline
         label="Why Choose Trefloo"
-        className="text-white text-3xl font-bold text-center mb-8 mt-12  capitalize p-1"
+        className="text-white text-3xl font-bold text-center mb-8 mt-12 capitalize p-1"
       ></Tagline>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-black mx-22 p-10 rounded-4xl">
-        <div className="relative h-[480px] rounded-xl overflow-hidden shadow-xl">
-          <Skeleton className="absolute inset-0 bg-zinc-800 text-white" />
+        <div className="relative h-[480px] rounded-xl overflow-hidden shadow-xl flex items-end">
+          <img
+            src={WcuImg}
+            alt="Founders"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60 flex items-end p-6">
             <div>
               <h3 className="text-white text-xl font-semibold mb-2">
@@ -27,13 +30,27 @@ function Wcu() {
             </div>
           </div>
         </div>
-        {/* right side  sectionn */}
+        {/* right side  section */}
         <div className="space-y-6 p-4 text-white">
-          <h3 className="text-2xl font-bold">Administators Summary.</h3>
+          <h3 className="text-3xl font-bold tracking-wide text-gradient bg-gradient-to-r from-yellow-300 to-pink-500 bg-clip-text text-transparent">
+            Who We Are
+          </h3>
 
-          <div className="space-y-4 text-white">
-            <h1 className=" italic font-medium ">"Built by creators passionate about culture, community, and tech, our platform reimagines rural travel through immersive experiences and AI-powered planning. From empowering village guides and hosts to offering AR temple tours and folk art workshops, every feature supports sustainable, authentic tourism. Users can explore festivals, book spiritual journeys, and enjoy homely food—while locals earn through ratings, content, and service. With smart tools like AI itinerary planners, BNPL, SOS safety, and offline access, we make mindful travel seamless. Together, we're bridging heritage with modern convenience—one village, one story at a time."</h1>
-        </div>
+          <div className="relative bg-zinc-900 bg-opacity-60 backdrop-blur-md border border-zinc-700 rounded-2xl p-6 shadow-lg">
+            <div className="text-7xl text-yellow-400 font-serif mb-4 leading-none">“</div>
+            <p className="text-lg leading-relaxed italic font-medium text-zinc-200">
+              Built by creators passionate about culture, community, and tech, our
+              platform reimagines rural travel through immersive experiences and
+              AI-powered planning. From empowering village guides and hosts to offering
+              AR temple tours and folk art workshops, every feature supports sustainable,
+              authentic tourism. Users can explore festivals, book spiritual journeys,
+              and enjoy homely food—while locals earn through ratings, content, and
+              service. With smart tools like AI itinerary planners, BNPL, SOS safety, and
+              offline access, we make mindful travel seamless. Together, we're bridging
+              heritage with modern convenience—one village, one story at a time.
+            </p>
+            <div className="text-7xl text-yellow-400 font-serif text-right mt-4 leading-none">”</div>
+          </div>
         </div>
       </div>
     </div>

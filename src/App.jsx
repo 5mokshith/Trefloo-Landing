@@ -13,8 +13,8 @@ function App() {
         <Hero />
       </section>
       <Features></Features>
-      <Faq></Faq>
       <Wcu></Wcu>
+      <Faq></Faq>
 
     </div>
   );

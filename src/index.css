@@ -239,3 +239,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+::selection {
+  background: #be3144;
+}
