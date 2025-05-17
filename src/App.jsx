@@ -8,13 +8,13 @@ import Voyana from "./UI/voyana";
 import Feedback from "./UI/Feedback";
 import Waitlist from "./UI/Waitlist";
 import Footer from "./UI/Footer";
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   return (
     <div className="relative min-h-screen">
 
-      <section>
+      <Analytics/>
         <Nav />
-      </section>
 
       <section id="hero" className="relative min-h-screen mb-80">
         <Hero />
