@@ -1,7 +1,7 @@
 function NavButton({ label }) {
   return (
     <button
-      className="transition-all duration-200 font-semibold text-sm leading-snug h-8 px-4 py-2 mx-8 inline-flex justify-center items-center relative text-white cursor-pointer bg-gray-950 rounded-[2rem] hover:shadow-sm hover:shadow-indigo-300 shadow shadow-neutral-300
+      className="transition-all duration-200 font-semibold text-sm leading-snug h-8 px-4 py-2 mx-8 inline-flex justify-center items-center gap-1 relative text-white cursor-pointer bg-gray-950 rounded-[2rem] hover:shadow-sm hover:shadow-indigo-300 shadow shadow-neutral-300
 
       before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[linear-gradient(to_right,_#288ff0,_rgb(222,105,40))] before:rounded-[2rem] before:-z-10 before:transition-all before:duration-200 hover:before:scale-100 hover:before:blur-md
 

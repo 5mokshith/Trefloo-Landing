@@ -11,7 +11,7 @@ function Hero() {
         autoPlay
         loop
         muted
-        className="w-full h-full"
+        className="w-full h-full scale-130 translate-y-38"
       >
         <source src={HeroBg} type="video/webm" />
         Your browser does not support the video tag.
